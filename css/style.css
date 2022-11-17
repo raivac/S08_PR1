@@ -1,20 +1,32 @@
 *{
     margin: 0; padding: 0; 
     text-decoration: none;
-    box-sizing: border-box;  border: 1px dotted green;
+    box-sizing: border-box;  
+    /* border: 1px dotted green; */
 }
 
 :root{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    text-align: center;
   
 }
 
 header h1{
-    margin: 1em;
-    text-align: center;
+    margin: 2em;
+    font-size: 3rem;
 }
 
+body h2{
+    margin: 2em;
+    font-size: 2rem;
+}
+
+hr{
+    margin: 3em;
+}
 /*********************  EJERCICO 1  **********************/
 
 section div#e1{
@@ -22,7 +34,8 @@ section div#e1{
     width: 600px;
     height: 400px;
     background-size: 100% 100%;
-    animation: carrusel 30s infinite alternate;
+    animation: carrusel 20s infinite alternate;
+    border-radius: 25px;
 }
 
 @keyframes carrusel {
@@ -33,7 +46,7 @@ section div#e1{
     }
 
     31% , 34%{
-        opacity: 0.1;
+        opacity: 0;
         transform: rotate(-360deg);
     }
 
@@ -44,7 +57,7 @@ section div#e1{
     }
 
     66% , 69%{
-        opacity: 0.1;
+        opacity: 0;
         transform: rotate(-360deg);
     }
 
@@ -56,3 +69,83 @@ section div#e1{
 }
 
 /*********************  EJERCICO 2  **********************/
+
+section div#e2{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section div#e2 a{
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    color: aqua;
+    width: auto;
+    height: auto;
+    margin: 0  auto;
+    padding: 15px 30px;
+    border-radius: 10px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+section div#e2 a:hover{
+    color:rgb(36, 36, 36);
+    background-color: aqua;
+    transition-delay: 1s;
+    box-shadow: 0 0 10px aqua, 0 0 40px aqua,0 0 80px aqua;
+}
+section div#e2 a span{
+    position: absolute;
+    display: block;
+}
+section div#e2 a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,aqua);
+}
+section div#e2 a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+section div#e2 a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,aqua);
+}
+section div#e2 a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+section div#e2 a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,aqua);
+}
+section div#e2 a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+section div#e2 a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,aqua);
+}
+section div#e2 a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
