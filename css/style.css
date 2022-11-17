@@ -1,0 +1,58 @@
+*{
+    margin: 0; padding: 0; 
+    text-decoration: none;
+    box-sizing: border-box;  border: 1px dotted green;
+}
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  
+}
+
+header h1{
+    margin: 1em;
+    text-align: center;
+}
+
+/*********************  EJERCICO 1  **********************/
+
+section div#e1{
+    margin: 0 auto;
+    width: 600px;
+    height: 400px;
+    background-size: 100% 100%;
+    animation: carrusel 30s infinite alternate;
+}
+
+@keyframes carrusel {
+    0% , 30%{
+        background-image: url("../img/img1.jpg");
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    31% , 34%{
+        opacity: 0.1;
+        transform: rotate(-360deg);
+    }
+
+    35% , 65%{
+        background-image: url("../img/img2.jpg");
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    66% , 69%{
+        opacity: 0.1;
+        transform: rotate(-360deg);
+    }
+
+    70% , 100%{
+        background-image: url("../img/img3.jpg");
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+/*********************  EJERCICO 2  **********************/
